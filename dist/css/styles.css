@@ -1,0 +1,72 @@
+body {
+  width: 100%;
+  height: 100%;
+  background-image: url("../imgs/whiteboard.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: #90aaff; }
+
+body h3 {
+  margin: 0;
+  padding: 0; }
+
+body .turn-selector {
+  font-size: 1.5em;
+  margin-left: 7.5em; }
+
+body .turn-selector button {
+  font-size: 2.5em;
+  background-color: #90AAFF; }
+
+body .table {
+  width: 100%;
+  height: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+body .table .board {
+  width: 400px;
+  height: 400px;
+  margin: 0;
+  padding: 0; }
+
+body .table .board .inside-board {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+body .table .board .inside-board .cell {
+  width: 33%;
+  height: 33%;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 10em; }
+
+body .table .board .inside-board .bot-cell {
+  border-bottom: 1px solid black; }
+
+body .table .board .inside-board .right-cell {
+  border-right: 1px solid black; }
