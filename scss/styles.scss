@@ -6,20 +6,42 @@ body {
 	background-position: center;
 	background-size: contain;
 	background-color: #90aaff;
+	font-family: 'Gochi Hand', cursive;
 
 	h3 {
 		margin: 0;
 		padding: 0;
 	}
 
-	.turn-selector {
+	.remove-events {
+		pointer-events: none;
+	}
+	
+	.top-bar {
+		display: flex;
+		width: 80%;
+		flex-direction: row;
+		justify-content: space-around;
 		font-size: 1.5em;
-		margin-left: 7.5em;
 
-		button {
-			font-size: 2.5em;
-			background-color: #90AAFF;
+		.turn-selector {
+			margin-left: 7.5em;
+
+			button {
+				font-size: 2.5em;
+				background-color: #90AAFF;
+			}
 		}
+
+		.refresh-icon {
+			font-size: 3em;
+			color: #aaa;
+		}
+
+		.refresh-icon:hover {
+			color: #000
+		}
+
 	}
 
 	.table {

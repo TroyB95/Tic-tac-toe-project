@@ -5,19 +5,42 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  background-color: #90aaff; }
+  background-color: #90aaff;
+  font-family: 'Gochi Hand', cursive; }
 
 body h3 {
   margin: 0;
   padding: 0; }
 
-body .turn-selector {
-  font-size: 1.5em;
+body .remove-events {
+  pointer-events: none; }
+
+body .top-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 1.5em; }
+
+body .top-bar .turn-selector {
   margin-left: 7.5em; }
 
-body .turn-selector button {
+body .top-bar .turn-selector button {
   font-size: 2.5em;
   background-color: #90AAFF; }
+
+body .top-bar .refresh-icon {
+  font-size: 3em;
+  color: #aaa; }
+
+body .top-bar .refresh-icon:hover {
+  color: #000; }
 
 body .table {
   width: 100%;

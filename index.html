@@ -6,19 +6,28 @@
     <title>Tic Tac Toe</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Gochi+Hand" rel="stylesheet"> 
 </head> 
 <body>
 	<h3>Tic Tac Toe</h3>
-	<div class="turn-selector">
-		<h3>Select who plays first?</h3>
-		<button class="x-selector">X</button>
-		<button class="o-selector">O</button>
+	<div class="top-bar">
+		<div class="turn-selector">
+			<h3>Select who plays first?</h3>
+			<button class="x-selector">X</button>
+			<button class="o-selector">O</button>
+		</div>
+			<div>
+				<h2 class="score-counter"><span class="player-one">Player 1:</span>   ||   <span class="player-two">Player 2:</span></h2>
+			</div>
+			<div>
+				<ion-icon name="refresh" class="refresh-icon"></ion-icon>
+			</div>
 	</div>
 	<div class="table">
 		<div class="board">
 			<ul class="inside-board">
-				<li class="cell">X</li>
-				<li class="cell">O</li>
+				<li class="cell"></li>
+				<li class="cell"></li>
 				<li class="cell right-cell"></li>
 				<li class="cell"></li>
 				<li class="cell"></li>
@@ -31,6 +40,8 @@
 		</div>
 	</div>
 
-	<script src="js/app.js"></script>
+	<script src="https://unpkg.com/ionicons@4.1.2/dist/ionicons.js"></script>
+	<script src="js/all.js"></script>
+
 </body>
 </html>
