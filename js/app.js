@@ -147,9 +147,17 @@ var octopus = {
 			if(cell.classList.contains('remove-events')){
 				cell.classList.toggle('remove-events');
 			}
+			var xSelector = document.querySelector('.x-selector');
+			var oSelector = document.querySelector('.o-selector');
+			if(xSelector.classList.contains('remove-events') && oSelector.classList.contains('remove-events')) {
+				xSelector.classList.toggle('remove-events');
+				oSelector.classList.toggle('remove-events');
+			}
 			model.currentTurn = 0;
 			model.players[0].score = 0;
 			model.players[1].score = 0;
+			model.players[0].symbol = '';
+			model.players[1].symbol = '';
 			scoreView.init();
 		})
 		
@@ -180,8 +188,12 @@ var symbolSelectView = {
 				model.players[0].symbol = 'X';
 				model.players[1].symbol = 'O'
 				gameBoardView.init();
-		} else {
+				xSelector.classList.toggle('remove-events');
+				oSelector.classList.toggle('remove-events');
+		} else if (model.players[0].symbol === 'X') {
 			alert('X is already selected to go first');
+		} else if (model.players[0].symbol === 'O') {
+			alert('Please restart and select a starting symbol');
 		}
 		})
 
@@ -190,8 +202,12 @@ var symbolSelectView = {
 				model.players[0].symbol = 'O';
 				model.players[1].symbol = 'X';
 				gameBoardView.init();
-			} else {
+				oSelector.classList.toggle('remove-events');
+				xSelector.classList.toggle('remove-events');
+			} else if (model.players[0].symbol === 'O') {
 				alert('O is already selected to go first');
+			} else if (model.players[0].symbol === 'X') {
+				alert('Please restart and select a starting symbol')
 			}
 		})
 	},
@@ -207,6 +223,7 @@ var gameBoardView = {
 
 	init: function() {
 		this.board = document.querySelector('.inside-board');
+		
 
 		this.render();
 	},
